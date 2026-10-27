@@ -6,8 +6,8 @@
 <meta name="robots" content="noindex">
 <title>GroundWell Sound &amp; Wellness Center — A place to pause</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Karla:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Karla:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -33,50 +33,48 @@
 
 <main>
   <section class="hero">
-    <div class="wrap hero-grid">
-      <div class="hero-text">
-        <svg class="hero-logo" viewBox="0 0 120 100" aria-hidden="true"><use href="#logo"/></svg>
-        <p class="eyebrow">Coming soon &middot; Aurora, Ohio</p>
-        <h1>There's a place for you <em>here.</em></h1>
-        <p class="offer">Sound. Reiki. Somatic practices. Community.</p>
-        <form class="inline" id="quick" novalidate>
-          <label class="sr" for="qemail">Email</label>
-          <input id="qemail" name="email" type="email" placeholder="Your email" autocomplete="email" required>
-          <button type="submit">Notify me</button>
-        </form>
-        <p class="qnote" aria-live="polite">One note when the doors open. Nothing else.</p>
-      </div>
-      <figure class="hero-photo">
-        <!-- Photo: "Tibetan singing bowls on tatami mat of Japanese Buddhist temple" by Gpwitteveen,
-             CC BY-SA 4.0, via Wikimedia Commons (colour lightly warmed):
-             https://commons.wikimedia.org/wiki/File:Tibetan_singing_bowls_on_tatami_mat_of_Japanese_Buddhist_temple.jpg -->
-        <img src="images/singing-bowls.webp" width="1280" height="960" alt="Singing bowls set out on tatami mats for a sound session">
-        <figcaption>Photo: Gpwitteveen, CC BY-SA 4.0</figcaption>
-      </figure>
+    <!-- Photo: "Bouldering Project (old University National Bank) 26 - yoga studio" by Joe Mabel,
+         CC BY-SA 4.0, via Wikimedia Commons:
+         https://commons.wikimedia.org/wiki/File:Bouldering_Project_(old_University_National_Bank)_26_-_yoga_studio.jpg -->
+    <img class="hero-bg" src="images/hero.webp" srcset="images/hero-1200.webp 1200w, images/hero.webp 2400w" sizes="100vw" width="2400" height="1600" alt="A quiet, sunlit studio with warm wooden floors, ready for a session">
+    <div class="wrap hero-text">
+      <p class="label">Coming soon &middot; Aurora, Ohio</p>
+      <h1>There's a place for you <em>here.</em></h1>
+      <p class="offer">Sound. Reiki. Somatic practices. Community.</p>
+      <form class="inline" id="quick" novalidate>
+        <label class="sr" for="qemail">Email</label>
+        <input id="qemail" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+        <button type="submit">Notify me</button>
+      </form>
+      <p class="qnote" aria-live="polite">One note when the doors open. Nothing else.</p>
     </div>
+    <p class="credit">Photo: Joe Mabel, CC BY-SA 4.0, Wikimedia Commons</p>
   </section>
 
   <section class="about">
-    <div class="wrap">
-      <h2>What we're building</h2>
+    <div class="wrap about-grid">
+      <div class="about-head reveal"><p class="label dark">The center</p><h2>What we're building</h2></div>
       <!-- PLACEHOLDER COPY: replace with the client's own words -->
-      <p class="intro">A calm room in Aurora for sound baths, Reiki, somatic practices and gatherings, open to anyone who could use an hour to slow down.</p>
+      <p class="intro reveal">A calm room in Aurora for sound baths, Reiki, somatic practices and gatherings, open to anyone who could use an hour to slow down.</p>
+      </div>
+    <div class="wrap">
       <ul class="offers">
-        <li><span class="dot d1"></span><h3>Sound</h3><p>Singing bowls and gongs to settle the body and quiet the mind.</p></li>
-        <li><span class="dot d2"></span><h3>Reiki</h3><p>Gentle, hands-on energy work in a quiet private room.</p></li>
-        <li><span class="dot d3"></span><h3>Somatic practices</h3><p>Breath and movement that help you feel at home in your body.</p></li>
-        <li><span class="dot d4"></span><h3>Community</h3><p>Circles and gatherings for people who want to slow down together.</p></li>
+        <li class="reveal"><span class="dot d1"></span><h3>Sound</h3><p>Singing bowls and gongs to settle the body and quiet the mind.</p></li>
+        <li class="reveal"><span class="dot d2"></span><h3>Reiki</h3><p>Gentle, hands-on energy work in a quiet private room.</p></li>
+        <li class="reveal"><span class="dot d3"></span><h3>Somatic practices</h3><p>Breath and movement that help you feel at home in your body.</p></li>
+        <li class="reveal"><span class="dot d4"></span><h3>Community</h3><p>Circles and gatherings for people who want to slow down together.</p></li>
       </ul>
     </div>
   </section>
 
   <section class="signup" id="signup">
     <div class="wrap signup-grid">
-      <div>
+      <div class="reveal">
+        <p class="label dark">Stay in touch</p>
         <h2>Hear from us first</h2>
         <p>The doors aren't open yet. Leave your name and we'll write when they are.</p>
       </div>
-      <div class="card">
+      <div class="card reveal">
         <form id="form" novalidate>
           <label>Your name<input name="name" autocomplete="name" required></label>
           <label>Email<input name="email" type="email" autocomplete="email" required></label>
@@ -100,6 +98,6 @@
   </div>
   <p class="wrap legal">&copy; 2026 GroundWell Sound &amp; Wellness Center &middot; Preview</p>
 </footer>
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>

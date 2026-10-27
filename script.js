@@ -11,3 +11,8 @@ f.addEventListener('submit',e=>{e.preventDefault();
  if(!n||!ok){err.textContent=!n?'Please add your name.':'That email doesn’t look quite right.';err.hidden=false;return}
  document.getElementById('who').textContent=n.split(' ')[0];
  f.hidden=true;document.querySelector('.thanks').hidden=false;});
+document.documentElement.classList.add('js');
+(()=>{const els=document.querySelectorAll('.reveal');
+ if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return}
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+ els.forEach(e=>io.observe(e));})();
