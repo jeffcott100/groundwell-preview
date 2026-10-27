@@ -7,7 +7,7 @@
 <title>GroundWell Sound &amp; Wellness Center — A place to pause</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Karla:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -20,7 +20,7 @@
   </symbol>
 </svg>
 
-<header class="top">
+<header class="top"><div class="wrap top-row">
   <a class="mark" href="#" aria-label="GroundWell Sound and Wellness Center home">
     <svg class="glyph" aria-hidden="true"><use href="#logo"/></svg>
     <span class="wm"><span class="word">GroundWell</span><span class="sub">Sound &amp; Wellness Center</span></span>
@@ -29,69 +29,77 @@
     <a href="https://instagram.com/groundwellcenter" aria-label="Instagram @groundwellcenter"><svg><use href="#ig"/></svg></a>
     <a href="https://facebook.com/groundwellcenter" aria-label="Facebook GroundWell"><svg><use href="#fb"/></svg></a>
   </nav>
-</header>
+</div></header>
 
 <main>
   <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">Opening soon &middot; Aurora, Ohio</p>
-      <h1>There's a place<br>for you <em>here.</em></h1>
-      <p class="lede">A place to pause.</p>
-      <p class="offer">Sound. Reiki. Somatic practices. Community.</p>
-      <a class="btn" href="#signup">Hear when we open</a>
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <svg class="hero-logo" viewBox="0 0 120 100" aria-hidden="true"><use href="#logo"/></svg>
+        <p class="eyebrow">Coming soon &middot; Aurora, Ohio</p>
+        <h1>There's a place for you <em>here.</em></h1>
+        <p class="offer">Sound. Reiki. Somatic practices. Community.</p>
+        <form class="inline" id="quick" novalidate>
+          <label class="sr" for="qemail">Email</label>
+          <input id="qemail" name="email" type="email" placeholder="Your email" autocomplete="email" required>
+          <button type="submit">Notify me</button>
+        </form>
+        <p class="qnote" aria-live="polite">One note when the doors open. Nothing else.</p>
+      </div>
+      <figure class="hero-photo">
+        <!-- Photo: "A sound bath is performed by a sound healing practitioner in Peachtree, North Carolina 07"
+             by Harrison Keely, CC BY 4.0, via Wikimedia Commons:
+             https://commons.wikimedia.org/wiki/File:A_sound_bath_is_performed_by_a_sound_healing_practitioner_in_Peachtree,_North_Carolina_07.jpg -->
+        <img src="images/sound-bath.webp" width="1280" height="960" alt="Singing bowls set out for a sound bath">
+        <figcaption>Photo: Harrison Keely, CC BY 4.0</figcaption>
+      </figure>
     </div>
-    <div class="hero-art" aria-hidden="true">
-      <div class="block b1"></div><div class="block b2"></div>
-      <svg class="big" viewBox="0 0 120 100"><use href="#logo"/></svg>
-    </div>
-    <svg class="wave" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C100 10 200 50 300 30 S500 10 600 30 S800 50 900 30 S1100 10 1200 30 S1400 50 1500 30 S1700 10 1800 30 S2000 50 2100 30 S2300 10 2400 30" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
   </section>
 
-  <section class="band">
-    <div class="inner">
+  <section class="about">
+    <div class="wrap">
       <h2>What we're building</h2>
       <!-- PLACEHOLDER COPY: replace with the client's own words -->
-      <p>GroundWell is a sound and wellness center in Aurora: a calm room for sound baths, Reiki, somatic practices and gatherings, open to anyone who could use an hour to slow down.</p>
+      <p class="intro">A calm room in Aurora for sound baths, Reiki, somatic practices and gatherings, open to anyone who could use an hour to slow down.</p>
       <ul class="offers">
-        <li><span class="dot d1"></span>Sound</li><li><span class="dot d2"></span>Reiki</li><li><span class="dot d3"></span>Somatic practices</li><li><span class="dot d4"></span>Community</li>
+        <li><span class="dot d1"></span><h3>Sound</h3><p>Singing bowls and gongs to settle the body and quiet the mind.</p></li>
+        <li><span class="dot d2"></span><h3>Reiki</h3><p>Gentle, hands-on energy work in a quiet private room.</p></li>
+        <li><span class="dot d3"></span><h3>Somatic practices</h3><p>Breath and movement that help you feel at home in your body.</p></li>
+        <li><span class="dot d4"></span><h3>Community</h3><p>Circles and gatherings for people who want to slow down together.</p></li>
       </ul>
     </div>
   </section>
 
   <section class="signup" id="signup">
-    <div class="card">
-      <h2>Hear from us first</h2>
-      <p class="aside">The doors aren't open yet. Leave your name and we'll write when they are.</p>
-      <form id="form" novalidate>
-        <label>Your name<input name="name" autocomplete="name" required></label>
-        <label>Email<input name="email" type="email" autocomplete="email" required></label>
-        <button type="submit">Keep me posted</button>
-        <p class="err" role="alert" hidden></p>
-      </form>
-      <div class="thanks" hidden aria-live="polite">
-        <p class="t1">Thank you, <span id="who"></span>.</p>
-        <p>We'll send one note when we open, and not much else.</p>
+    <div class="wrap signup-grid">
+      <div>
+        <h2>Hear from us first</h2>
+        <p>The doors aren't open yet. Leave your name and we'll write when they are.</p>
       </div>
-      <p class="follow">Or follow along
-        <a href="https://instagram.com/groundwellcenter" aria-label="Instagram"><svg><use href="#ig"/></svg></a>
-        <a href="https://facebook.com/groundwellcenter" aria-label="Facebook"><svg><use href="#fb"/></svg></a>
-        <span>@groundwellcenter</span></p>
+      <div class="card">
+        <form id="form" novalidate>
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <button type="submit">Keep me posted</button>
+          <p class="err" role="alert" hidden></p>
+        </form>
+        <div class="thanks" hidden aria-live="polite">
+          <p class="t1">Thank you, <span id="who"></span>.</p>
+          <p>We'll send one note when we open, and not much else.</p>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <section class="visit">
-    <div><h3>Find us</h3><address>1234 East Garfield Road<br>Aurora, OH 44202</address></div>
-    <div><h3>Say hello</h3><p><a href="tel:+13305551234">(330) 555-1234</a></p></div>
-    <div><h3>Follow along</h3><p class="soc">
-      <a href="https://instagram.com/groundwellcenter"><svg><use href="#ig"/></svg>@groundwellcenter</a><br>
-      <a href="https://facebook.com/groundwellcenter"><svg><use href="#fb"/></svg>GroundWell Center</a></p></div>
   </section>
 </main>
 <footer>
-  <span class="fmark"><svg aria-hidden="true"><use href="#logo"/></svg>GroundWell &middot; A place to pause.</span>
-  <span class="fsoc"><a href="https://instagram.com/groundwellcenter" aria-label="Instagram"><svg><use href="#ig"/></svg></a><a href="https://facebook.com/groundwellcenter" aria-label="Facebook"><svg><use href="#fb"/></svg></a></span>
-  <span>&copy; 2026 GroundWell Sound &amp; Wellness Center &middot; Preview</span>
+  <div class="wrap foot-grid">
+    <div><span class="fmark"><svg aria-hidden="true"><use href="#logo"/></svg>GroundWell</span><p class="tag">A place to pause.</p></div>
+    <div><h3>Find us</h3><address>1234 East Garfield Road<br>Aurora, OH 44202</address></div>
+    <div><h3>Say hello</h3><p><a href="tel:+13305551234">(330) 555-1234</a></p></div>
+    <div><h3>Follow along</h3><p class="fsoc"><a href="https://instagram.com/groundwellcenter" aria-label="Instagram"><svg><use href="#ig"/></svg></a><a href="https://facebook.com/groundwellcenter" aria-label="Facebook"><svg><use href="#fb"/></svg></a><span>@groundwellcenter</span></p></div>
+  </div>
+  <p class="wrap legal">&copy; 2026 GroundWell Sound &amp; Wellness Center &middot; Preview</p>
 </footer>
-<script src="script.js"></script>
+<script src="script.js?v=3"></script>
 </body>
 </html>
